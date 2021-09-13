@@ -1,5 +1,9 @@
 GEM
   specs:
+
+GEM
+  remote: https://rubygems.org/
+  specs:
     ast (2.4.2)
     backport (1.2.0)
     benchmark (0.1.1)
@@ -33,7 +37,7 @@ GEM
       racc (~> 1.4)
     opus-ruby (1.0.1)
       ffi
-    parallel (1.20.1)
+    parallel (1.21.0)
     parser (3.0.2.0)
       ast (~> 2.4.1)
     pg (1.2.3)
@@ -48,7 +52,7 @@ GEM
     reverse_markdown (2.0.0)
       nokogiri
     rexml (3.2.5)
-    rubocop (1.20.0)
+    rubocop (1.21.0)
       parallel (~> 1.10)
       parser (>= 3.0.0.0)
       rainbow (>= 2.2.2, < 4.0)
@@ -91,9 +95,12 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  discordrb
-  pg
-  solargraph
+  discordrb!
+  pg!
+  solargraph!
+
+RUBY VERSION
+   ruby 3.0.2p107
 
 BUNDLED WITH
    2.2.27
