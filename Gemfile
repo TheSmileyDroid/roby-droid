@@ -8,6 +8,8 @@ source 'https://rubygems.org' do
     gem "reel"
     gem "http"
     gem "webrick"
-    gem "solargraph"
+    gem "irb"
 end
+
+gem "solargraph", group: :development
 
