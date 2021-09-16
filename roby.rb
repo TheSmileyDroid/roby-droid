@@ -13,14 +13,13 @@ conn.exec(<<END_SQL)
   );
 END_SQL
 
-bot = Discordrb::Bot.new token: ENV['BOT_TOKEN']
+bot = Discordrb::Commands::CommandBot.new token: ENV['BOT_TOKEN'], prefix: '&'
 
 bot.message(with_text: 'Ping!') do |event|
   result = conn.exec_params("
     SELECT count FROM users WHERE id_user = $1::text
     ", [event.author.id])
   puts result
-  puts result.inspect
   if result.ntuples.positive?
     puts result[0]['count']
     n_result = result[0]['count'].to_i + 1
@@ -49,6 +48,16 @@ bot.message(with_text: 'Count') do |event|
   end
   puts final_str
   event.respond final_str
+end
+
+bot.command :help do |_event|
+  "
+  Ajuda:
+
+   - &help: Essa resposta.
+   - Ping!: Responde Pong! e aumenta sua contagem de \"Pong!\"s.
+   - Count: Responde a contagem de \"Pong!\"s de todas as pessoas.
+  "
 end
 
 get '/' do
