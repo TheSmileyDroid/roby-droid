@@ -13,6 +13,7 @@ module Utils
    - &help: Essa resposta.
    - Ping!: Responde Pong! e aumenta sua contagem de \"Pong!\"s.
    - Count: Responde a contagem de \"Pong!\"s de todas as pessoas.
+   - &tucano: Envia a imagem do 'Vai tomar no cu demorou?'
   "
   end
 end
