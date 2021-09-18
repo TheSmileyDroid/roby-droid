@@ -11,6 +11,7 @@ source 'https://rubygems.org' do
     gem "http"
     gem "webrick"
     gem "irb"
+    gem 'unsplash'
 end
 
 gem "solargraph", group: :development

@@ -14,6 +14,7 @@ module Utils
    - Ping!: Responde Pong! e aumenta sua contagem de \"Pong!\"s.
    - Count: Responde a contagem de \"Pong!\"s de todas as pessoas.
    - &tucano: Envia a imagem do 'Vai tomar no cu demorou?'
+   - &image <Imagem> <Indice da imagem>: Envia uma imagem do site Unsplash.
   "
   end
 end

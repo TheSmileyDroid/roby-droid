@@ -7,7 +7,7 @@ require_relative 'containers/ping'
 require_relative 'containers/utils'
 require_relative 'containers/images'
 
-bot = Discordrb::Commands::CommandBot.new token: ENV['BOT_TOKEN'], prefix: '&'
+bot = Discordrb::Commands::CommandBot.new token: ENV['BOT_TOKEN'], prefix: '&', intents: [:server_messages]
 
 bot.include! Ping
 bot.include! Utils
