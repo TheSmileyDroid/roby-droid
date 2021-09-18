@@ -20,7 +20,7 @@ module Images
   end
 
   command :image do |_event, image, index = 0|
-    results = Unsplash::Photo.search(image)
+    results = Unsplash::Photo.search(image, per_page: 30)
     results[index.to_i]['urls']['regular']
   end
 end
